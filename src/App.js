@@ -107,7 +107,7 @@ class App extends React.Component {
 
   onButtonHandler = () => {
     this.setState({userQuery: this.state.input})
-    fetch("http://localhost:3010/imageurl", {
+    fetch("https://arcane-bastion-99927.herokuapp.com/imageurl", {
       method: "post",
       headers: {
         "Content-Type": "application/json"
@@ -119,7 +119,7 @@ class App extends React.Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch("http://localhost:3010/image", {
+          fetch("https://arcane-bastion-99927.herokuapp.com/image", {
             method: "put",
             headers: {
               "Content-Type": "application/json"
